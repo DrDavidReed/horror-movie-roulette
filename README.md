@@ -1,4 +1,4 @@
-# Horror Movie Roulette
+# Horror Movie Roulette 🎬
 
 A modern horror movie discovery website that takes the indecision out of choosing what to watch.
 
