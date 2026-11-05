@@ -10,7 +10,7 @@ Explore thousands of horror films, narrow your search with custom filters, or le
 
 ## Preview
 
-![Horror Movie Roulette website preview](screenshot.png)
+![Horror Movie Roulette website preview](Screenshot.png)
 
 ---
 
