@@ -1,148 +1,89 @@
-# 🎬 Horror Movie Roulette
+# Horror Movie Roulette
 
-**Can't decide what horror movie to watch? Let fate choose your next nightmare.**
+A modern horror movie discovery website that takes the indecision out of choosing what to watch.
 
-Horror Movie Roulette is a free, responsive horror movie discovery website built with HTML, CSS and JavaScript.
+Explore thousands of horror films, narrow your search with custom filters, or let the roulette choose your next nightmare.
 
-Explore thousands of horror films, filter by your favourite subgenres, discover hidden gems, or spin the roulette to find something terrifying to watch.
-
-Created by **[DrDavidReed](https://github.com/DrDavidReed)**.
-
-### 🔴 [Launch Horror Movie Roulette](https://drdavidreed.github.io/horror-movie-roulette/)
+**[Launch Horror Movie Roulette](https://drdavidreed.github.io/horror-movie-roulette/)**
 
 ---
 
-## 📸 Screenshot
+## Preview
 
-![Horror Movie Roulette Screenshot](screenshot.png)
-
----
-
-## ✨ Features
-
-- 🎲 **Movie Roulette** — Can't decide what to watch? Let the roulette choose a random horror film.
-- 🎭 **Horror Subgenres** — Explore paranormal, slasher, psychological, found footage and other horror categories.
-- 🔎 **Advanced Filtering** — Filter movies by release period and minimum TMDB rating.
-- 🎞️ **7,000+ Horror Movies** — Browse a large catalogue of horror films, including popular releases and hidden gems.
-- ⭐ **Movie Information** — View posters, descriptions, release years and community ratings.
-- 👁️ **Watched Tracking** — Mark films you've watched and exclude them from future recommendations.
-- 📱 **Responsive Design** — Designed for desktop, tablet and mobile.
-- 🌑 **Minimal Black Theme** — A clean, dark interface with subtle red accents.
-- 🔄 **Catalogue Updates** — Supports automated catalogue generation using GitHub Actions.
+![Horror Movie Roulette website preview](screenshot.png)
 
 ---
 
-## 🛠️ Built With
+## Features
 
-- **HTML5** — Website structure
-- **CSS3** — Styling and responsive layouts
-- **JavaScript** — Roulette, filtering and watched tracking
-- **TMDB API** — Movie information, posters and ratings
-- **GitHub Pages** — Website hosting
-- **GitHub Actions** — Optional automated catalogue updates
+- **Movie Roulette** — Get a random horror movie recommendation based on your selected filters.
+- **Extensive Catalogue** — Explore over 7,000 horror films, from popular releases to hidden gems.
+- **Subgenre Discovery** — Browse paranormal, slasher, psychological, found footage and other horror categories.
+- **Custom Filters** — Refine recommendations by release period and minimum TMDB rating.
+- **Movie Details** — View posters, descriptions, release years and community ratings.
+- **Watched Tracking** — Mark films as watched and exclude them from future recommendations.
+- **Responsive Interface** — Designed for desktop, tablet and mobile devices.
+- **Local Storage** — Keep your watched history saved in your browser without an account.
 
-No frontend framework or database is required.
+## Technology
 
----
+| Technology | Purpose |
+| --- | --- |
+| HTML5 | Website structure |
+| CSS3 | Responsive layout and styling |
+| JavaScript | Roulette, filtering and watched tracking |
+| Python | Movie catalogue generation |
+| TMDB API | Movie metadata and posters |
+| GitHub Pages | Website hosting |
+| GitHub Actions | Optional automated catalogue updates |
 
-## 🚀 Getting Started
+The frontend is built without a JavaScript framework or backend database.
 
-### View the website
+## Getting Started
 
-Visit:
+### Use the live website
 
-https://drdavidreed.github.io/horror-movie-roulette/
+Visit **[Horror Movie Roulette](https://drdavidreed.github.io/horror-movie-roulette/)** to start discovering movies.
 
 ### Run locally
 
-1. Clone the repository:
+Clone the repository:
 
-   `git clone https://github.com/DrDavidReed/horror-movie-roulette.git`
+```bash
+git clone https://github.com/DrDavidReed/horror-movie-roulette.git
+cd horror-movie-roulette
+```
 
-2. Enter the project directory:
+Start a local development server:
 
-   `cd horror-movie-roulette`
+```bash
+python3 -m http.server 8000
+```
 
-3. Start a local web server:
+Open `http://localhost:8000` in your browser.
 
-   `python3 -m http.server 8000`
+The website loads its movie catalogue from `data/movies.json`.
 
-4. Open your browser and visit:
+## Movie Catalogue
 
-   `http://localhost:8000`
+Movie information is sourced from [The Movie Database (TMDB)](https://www.themoviedb.org/).
 
-The website loads movie information from `data/movies.json`.
+The catalogue is stored locally as JSON, allowing visitors to browse movies without supplying an API key. A Python script can regenerate the catalogue, and GitHub Actions can be configured to automate updates.
 
----
+API credentials should be stored in GitHub repository secrets rather than committed to the repository.
 
-## 🎲 How It Works
+## Watched History
 
-1. Choose your preferred horror subgenre.
-2. Select a release period.
-3. Adjust the minimum TMDB rating.
-4. Click **Spin the Roulette**.
-5. Discover your next horror movie!
+Watched movies are stored in your browser using local storage. Your selections persist between visits on the same browser, but they are not automatically synchronised between devices. Clearing browser data may remove your history.
 
-Already watched the recommendation? Mark it as watched and spin again.
+## Attribution
 
-The catalogue combines popular horror movies with lesser-known titles, giving you a chance to discover something you might otherwise miss.
+This product uses the TMDB API but is not endorsed or certified by TMDB.
 
----
+Movie artwork and metadata are provided by TMDB and their respective rights holders.
 
-## 🔐 TMDB Integration
+## Author
 
-Movie information is sourced from **The Movie Database (TMDB)**.
+Created by **[DrDavidReed](https://github.com/DrDavidReed)**.
 
-The website uses a pre-generated JSON catalogue rather than requiring visitors to enter an API key.
-
-The catalogue can be refreshed using a Python generator and GitHub Actions, with the TMDB API key stored securely as a repository secret named `TMDB_API_KEY`.
-
-**This product uses the TMDB API but is not endorsed or certified by TMDB.**
-
-Movie posters, descriptions and ratings belong to their respective owners and data providers.
-
-TMDB: https://www.themoviedb.org/
-
----
-
-## 💾 Watched Movies
-
-Watched-film tracking uses your browser's local storage.
-
-This means:
-
-- Your watched movies remain saved between visits on the same browser.
-- No account or login is required.
-- Your watched list is not automatically synchronised between devices.
-- Clearing browser storage may remove your watched history.
-
----
-
-## 📱 Device Compatibility
-
-Horror Movie Roulette uses responsive layouts to support:
-
-- Desktop computers
-- Laptops
-- Tablets
-- Mobile phones
-
-The interface automatically adapts to different screen sizes.
-
----
-
-## 🌐 Live Website
-
-**[Horror Movie Roulette](https://drdavidreed.github.io/horror-movie-roulette/)**
-
----
-
-## 👨‍💻 Author
-
-Created by **DrDavidReed**.
-
-GitHub: https://github.com/DrDavidReed
-
----
-
-*Your next nightmare is only one spin away.*
+[Live Website](https://drdavidreed.github.io/horror-movie-roulette/) | [GitHub Repository](https://github.com/DrDavidReed/horror-movie-roulette/)
